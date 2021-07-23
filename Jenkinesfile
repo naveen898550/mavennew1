@@ -1,0 +1,13 @@
+node('master')  
+{
+    stage('Contineous Download-master')
+    {
+        git 'https://github.com/intelliqittrainings/maven.git'
+    }
+
+    stage('Contineous Build-master')
+    {
+        sh 'mvn package'
+    } 
+}
+
